@@ -1,0 +1,21 @@
+version: 2
+
+exposures:
+
+  - name: customer_dashboard
+
+    label: Customer Analytics Dashboard
+
+    type: dashboard
+
+    maturity: high
+
+    description: >
+      Dashboard used by business users for customer analytics.
+
+    depends_on:
+      - ref('mart_customer_360')
+
+    owner:
+      name: Bhavesh Gupta
+      email: bhavesh.gupta@banksphere.com

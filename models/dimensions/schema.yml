@@ -1,0 +1,31 @@
+version: 2
+
+models:
+
+  - name: dim_account
+    description: "Account dimension containing account-level information."
+
+    columns:
+
+      - name: account_id
+        description: "Unique identifier for the account."
+
+      - name: customer_id
+        description: "Customer who owns the account."
+
+      - name: branch_id
+        description: "Branch associated with the account."
+
+      - name: account_type
+        description: "Type of bank account."
+
+      - name: account_status
+        description: "Current status of the account."
+
+      - name: current_balance
+        description: "Current account balance."
+
+        tests:
+          - not_null:
+              config:
+                severity: warn

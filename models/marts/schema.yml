@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: mart_customer_360
+    description: "Comprehensive customer 360 analytics mart."
+
+  - name: mart_daily_transactions
+    description: "Daily transaction summary."
+
+  - name: mart_branch_performance
+    description: "Branch level transaction performance."
+
+  - name: mart_loan_portfolio
+    description: "Loan portfolio by type and status."
+
+  - name: mart_customer_profitability
+    description: "Customer profitability analysis."

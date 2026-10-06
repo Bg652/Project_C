@@ -1,0 +1,51 @@
+version: 2
+
+models:
+
+  - name: fact_transactions
+    description: "Fact table containing banking transactions."
+
+    columns:
+
+      - name: transaction_id
+        tests:
+          - unique
+          - not_null
+
+      - name: account_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_account')
+                field: account_id
+
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer')
+                field: customer_id
+
+      - name: transaction_amount
+        tests:
+          - positive_amount
+
+  - name: fact_loan_payments
+    description: "Fact table containing loan payment transactions."
+
+    columns:
+
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+
+      - name: loan_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_loan')
+                field: loan_id

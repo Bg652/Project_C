@@ -1,0 +1,17 @@
+version: 2
+
+seeds:
+
+  - name: banking_reference_codes
+    description: "Reference mapping for banking products."
+
+    columns:
+
+      - name: product_code
+        description: "Unique banking product code."
+
+      - name: product_group
+        description: "Category of banking product."
+
+      - name: description
+        description: "Business description of product."
